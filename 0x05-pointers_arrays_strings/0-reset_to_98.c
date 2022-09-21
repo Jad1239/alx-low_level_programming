@@ -4,28 +4,20 @@
 
 /**
 
-*swap_int - swaps two integers' values
+*reset_to_98 - resets the value of given integer to 98
 
-*@a: first integer
+*@n: parameter
 
-*@b: second integer
-
-*Return: returns nothing
+*Return : nothing
 
 */
 
 
 
-void swap_int(int *a, int *b)
+void reset_to_98(int *n)
 
 {
 
-	int tmp = *a;
-
-
-
-	*a = *b;
-
-	*b = tmp;
+	*n = 98;
 
 }
