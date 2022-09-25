@@ -1,40 +1,22 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
-*  _strcmp - Function which compare two strings and
-*@s1: first string
-*@s2:second string
-*Return:
-*		returns zero if s1 == s2
-*		returns negative number if s1 < s2
-*		returns positive number if s1 > s2
+*print_numbers - function that print all numbers from
+*0 to 9
+*
+*Return: returns nothing
 */
 
-int _strcmp(char *s1, char *s2)
-{
-int i = 0, diff = 0;
 
-while (1)
+
+void print_numbers(void)
 {
-if (s1[i] == '\0' && s2[i] == '\0')
-reak;
-else if (s1[i] == '\0')
+int n;
+
+for (n = 48; n < 58; n++)
 {
-diff = s2[i];
-break;
+putchar(n);
 }
-else if (s2[i] == '\0')
-{
-diff = s1[i];
-break;
-}
-else if (s1[i] != s2[i])
-{
-diff = s1[i] - s2[i];
-break;
-}
-else
-i++;
-}
-return (diff);
+putchar(10);
 }
