@@ -1,26 +1,30 @@
+#include <stdio.h>
 #include "main.h"
 
-/**
-* rot13 - encodes a string into rot13
-* @s: string to encode
-*
-* Return: address of s
-*/
-char *rot13(char *s)
-{
-int i, j;
-char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-for (i = 0; *(s + i); i++)
+
+/**
+*print_square - prints squares
+*@size: parameter
+*Return: returns nothing
+*/
+
+void print_square(int size)
 {
-for (j = 0; j < 52; j++)
+int inc1, inc2;
+
+if (size > 0)
 {
-if (a[j] == *(s + i))
+for (inc1 = 0; inc1 < size; inc1++)
 {
-*(s + i) = b[j];
-break;
+for (inc2 = 0; inc2 < (size - 1); inc2++)
+{
+putchar('#');
+putchar('\n');
 }
 }
+else
+{
+putchar('\n');
 }
-return (s);
+}
